@@ -1,0 +1,9 @@
+﻿@{
+    using (Html.BeginForm("ReadableDate", "Customers", FormMethod.Post))
+    {
+        @Html.TextBox("dt");
+
+    <input type="submit" value="Display">
+    }
+}
+Readable date : @ViewBag.Message  

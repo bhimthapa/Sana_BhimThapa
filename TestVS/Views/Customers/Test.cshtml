@@ -1,0 +1,88 @@
+﻿@model  IEnumerable<TestVS.Models.Customer>
+
+@{
+    ViewBag.Title = "Test";
+}
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<h2>Test</h2>
+<link href="~/Content/Site.css" rel="stylesheet" />
+
+@{
+    WebGrid obj = new WebGrid(source: Model, selectionFieldName: "SelectedRow");
+
+    @obj.GetHtml(
+   htmlAttributes: new { id = "MainTable" },
+    headerStyle: "head",
+    tableStyle: "obj",
+    columns: obj.Columns(
+                 obj.Column(header: "Select?", format: (item) => Html.CheckBox("CustomerId", false)),
+         obj.Column("CustomerId", "CustomerId"),
+         obj.Column("FirstName", "FirstName"),
+         obj.Column("LastName", "LastName"),
+         obj.Column("Email", "Email")
+
+    )
+    )
+    TestVS.Models.Customer data = new TestVS.Models.Customer();
+    data.CustomerId = 101;
+
+    <div>
+        @Html.Partial("_SelectedValue", data)
+    </div>
+    @*if(obj.HasSelection)
+    {
+       @Html.Partial("_SelectedValue", new { Customer=obj.SelectedRow}); 
+    }*@
+    
+}
+
+    <script type="text/javascript">
+ 
+        $(function () {
+            alert('test');
+            var tr = $('#MainTable').find('tr');
+            //tr.removeClass("clickable");
+            tr.bind('mouseout', function (event) {
+
+                $("tr").mouseout(function () {
+                    $(this).removeClass("clickable")
+                });
+
+            });
+
+            var tr = $('#MainTable').find('tr');
+            tr.removeClass("clickable");
+            tr.bind('mouseover', function (event) {
+
+                $("tr").mouseover(function () {
+                    $(this).addClass("clickable")
+                });
+
+            });
+
+            //tr.bind('click', function (event) {
+
+            //    $("tr").click(function () {
+            //        $(this).addClass("clickable1")
+            //    });
+
+            //});
+
+            //tr.bind('unclick', function (event) {
+
+            //    $("tr").unclick(function () {
+            //        $(this).removeClass("clickable1")
+            //    });
+
+            //});
+
+        });
+
+        </script>
+
+
+
+
+
+

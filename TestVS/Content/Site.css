@@ -1,0 +1,83 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.webgrid  {   width:975px; 
+               border: 0px; 
+               border-collapse: collapse;  
+               }
+
+.webgrid a  {  color: #000; 
+               }
+
+.webgrid-header  {      padding: 6px 5px;                       
+                        text-align: center;background-color: #e8eef4; 
+                        height: 40px; 
+                        border-top: 2px solid #D6E8FF; 
+                        border-left: 2px solid #D6E8FF;  
+                        border-right: 2px solid #D6E8FF;
+                        border-bottom: 2px solid #3966A2;    
+                        }
+
+.webgrid-footer  { padding: 6px 5px;  
+                     text-align: center;   
+                     background-color: #e8eef4;  
+                     border-top: 2px solid #3966A2;     
+                     height: 30px;   
+                     border-bottom: 2px solid #D6E8FF;    
+                     border-left: 2px solid #D6E8FF;   
+                     border-right: 2px solid #D6E8FF;  
+                     }   
+
+.webgrid-alternating-row   {   height: 10px;  
+                                 background-color: #f2f2f2; 
+                                 border-bottom: 1px solid #d2d2d2;     
+                                 border-left: 2px solid #D6E8FF;  
+                                 border-right: 2px solid #D6E8FF;  
+                                    }    
+
+.webgrid-row-style {
+                    height: 10px;  
+                    border-bottom: 1px solid #d2d2d2;  
+                    border-left: 2px solid #D6E8FF;  
+                    border-right: 2px solid #D6E8FF;
+                    }
+
+.webgrid-selected-row  {  font-weight: bold;  }
+
+
+.clickable{
+    cursor: pointer;
+    /*background: #ffff99;*/
+     background: Yellow;
+     font-size:2em;
+     border: 6px solid #949599;
+     
+
+}
+
+
+.clickable1{
+    cursor: pointer;
+    /*background: #ffff99;*/
+     background: Green;
+     font-size:1em;
+     border: 6px solid #949599;
+   
+
+}
+
+
