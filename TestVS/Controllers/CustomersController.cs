@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using TestVS.Models;
-//https://github.com/bhimthapa/Sana_BhimThapa.git
+
 namespace TestVS.Controllers
 {
     public class CustomersController : Controller
@@ -17,7 +17,7 @@ namespace TestVS.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            string s;
+            
             return View(db.Customers.ToList());
         }
 
